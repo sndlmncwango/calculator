@@ -30,5 +30,15 @@ function operate(num1,fnKey,num2){
     }
 }
 operate(2,"*",6)
+const display = document.querySelector("#display")
+const one = document.querySelector("#one");
+const two = document.querySelector("#two");
+const three = document.querySelector("#three");
+const four = document.querySelector("#four");
+const keypad = document.querySelector("#keypad-container")
+one.addEventListener("click",(e)=>{
+    console.log(e)
+    display.append(one.value)
+})
 
 
