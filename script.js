@@ -1,46 +1,56 @@
-function add(value1,value2){
+let sum = 0;
+let number1 = 0;
+let number2 = 0;
+let functionKey = "";
+function add(value1, value2) {
     sum = value1 += value2
-    console.log(sum)
     return sum
 }
-function subtract(value1,value2){
+function subtract(value1, value2) {
     sum = value1 -= value2
-    console.log(sum)
     return sum
 }
-function divide(value1,value2){
+function divide(value1, value2) {
     sum = value1 /= value2
-    console.log(sum)
     return sum
 }
-function multiply(value1,value2){
+function multiply(value1, value2) {
     sum = value1 *= value2
-    console.log(sum)
     return sum
 }
-function operate(num1,fnKey,num2){
-    if(fnKey == "+"){
-        add(num1,num2)
-    }else if (fnKey == "-"){
-        subtract(num1,num2)
-    }else if(fnKey == "/"){
-        divide(num1,num2)
-    }else if(fnKey == "*"){
-        multiply(num1,num2)
+function operate(num1, fnKey, num2) {
+    if (fnKey == "+") {
+        add(num1, num2)
+    } else if (fnKey == "-") {
+        subtract(num1, num2)
+    } else if (fnKey == "/") {
+        divide(num1, num2)
+    } else if (fnKey == "*") {
+        multiply(num1, num2)
     }
+    display.innerText = sum;
 }
-operate(2,"*",6)
 const display = document.querySelector("#display")
-// const one = document.querySelector("#one");
-// const two = document.querySelector("#two");
-// const three = document.querySelector("#three");
-// const four = document.querySelector("#four");
-const keypad = document.querySelector("#keypad-container")
-keypad.addEventListener("click", (e) => {
-    if (e.target.nodeName == "INPUT") {
-        e.stopPropagation()
-        display.append(e.target.value)
+const numbers = document.querySelector("#numbers")
+const operators = document.querySelector("#operators")
+const plus = document.querySelector("#plus")
+const equalsTo = document.querySelector("#equalsTo")
+numbers.addEventListener("click", (e) => {
+    e.stopPropagation()
+    if (e.target.nodeName === "INPUT") {
+        display.append(e.target.value);
     }
+});
+operators.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (e.target.nodeName === "INPUT") {
+        number1 = display.innerText;
+        functionKey = e.target.value;
+        display.innerText = "";
+    }
+    
+});
+equalsTo.addEventListener("click", () => {
+    number2 = display.innerText;
+    operate(parseInt(number1), functionKey, parseInt(number2))
 })
-
-
