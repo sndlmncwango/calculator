@@ -1,17 +1,34 @@
 function add(value1,value2){
     sum = value1 += value2
+    console.log(sum)
     return sum
 }
 function subtract(value1,value2){
     sum = value1 -= value2
+    console.log(sum)
     return sum
 }
 function divide(value1,value2){
     sum = value1 /= value2
+    console.log(sum)
     return sum
 }
 function multiply(value1,value2){
     sum = value1 *= value2
+    console.log(sum)
     return sum
 }
-console.log(multiply(1,3))
+function operate(num1,fnKey,num2){
+    if(fnKey == "+"){
+        add(num1,num2)
+    }else if (fnKey == "-"){
+        subtract(num1,num2)
+    }else if(fnKey == "/"){
+        divide(num1,num2)
+    }else if(fnKey == "*"){
+        multiply(num1,num2)
+    }
+}
+operate(2,"*",6)
+
+
