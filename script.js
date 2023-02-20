@@ -38,7 +38,13 @@ const equalsTo = document.querySelector("#equalsTo")
 numbers.addEventListener("click", (e) => {
     e.stopPropagation()
     if (e.target.nodeName === "INPUT") {
+        if(e.target.id == "num"){
         display.append(e.target.value);
+        }else if (e.target.id === "ac"){
+            display.innerText = "";
+            number1 = 0;
+            number2 = 0;
+        }
     }
 });
 operators.addEventListener("click", (e) => {

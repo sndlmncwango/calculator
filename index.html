@@ -4,49 +4,55 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./stylesheet.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./stylesheet.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div id="main-container">
-            <div id="display-container">
-                <div id="display">
-                    
-                </div>
-            </div>
-            <div id="keypad-container">
-                <div id="numbers">
-                    <input type="button" value="1" id="one">
-                    <input type="button" value="2" id="two">
-                    <input type="button" value="3" id="three">
-                    <input type="button" value="4" id="four">
-                    <input type="button" value="5" id="one">
-                    <input type="button" value="6" id="two">
-                    <input type="button" value="7" id="three">
-                    <input type="button" value="8" id="four">
-                    <input type="button" value="9" id="one">
-                    <input type="button" value="0" id="two">
-                </div>
-                <div id="operators">
-                    <input type="button" value="+" id="plus">
-                    <input type="button" value="-">
-                    <input type="button" value="/">
-                    <input type="button" value="*">
-                </div>
-                <div id="equal">
-                    <input type="button" value="=" id="equalsTo">
-                </div>
+    <div id="main-container">
+        <div id="display-container">
+            <div id="display">
+
             </div>
         </div>
-        
-        <script src="./script.js" async defer></script>
-    </body>
+        <div id="keypad-container">
+            <div id="numbers">
+                <input type="button" value="AC" id="ac">
+                <input type="button" value="+/-" id="del">
+                <input type="button" value="toc" id="toc">
+                <input type="button" value="7" id="num">
+                <input type="button" value="8" id="num">
+                <input type="button" value="9" id="num">
+                <input type="button" value="4" id="num">
+                <input type="button" value="5" id="num">
+                <input type="button" value="6" id="num">
+                <input type="button" value="1" id="num">
+                <input type="button" value="2" id="num">
+                <input type="button" value="3" id="num">
+                <input type="button" value="0" id="num" class="zero">
+            </div>
+            <div id="operators">
+                <input type="button" value="+" id="plus">
+                <input type="button" value="-">
+                <input type="button" value="/">
+                <input type="button" value="*">
+            </div>
+        </div>
+        <div id="equal">
+            <input type="button" value="=" id="equalsTo">
+        </div>
+    </div>
+
+    <script src="./script.js" async defer></script>
+</body>
+
 </html>
